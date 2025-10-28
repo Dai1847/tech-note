@@ -1,0 +1,22 @@
+
+#gitコマンド一覧
+git init Gitリポジトリを作成する
+
+git branch <ブランチ名> ブランチを作成する
+→git checkout -b <ブランチ名>でもOK
+
+git checkout <ブランチ名>　指定したブランチに移動する
+
+git add <ファイル名>　指定したファイルをステージング環境に配置
+
+git commit ステージング環境に置いたファイルをローカルリポジトリ上にコミットする
+→
+
+git push -u <リモート名> <ブランチ名> ローカルリポジトリの変更をリモートリポジトリに反映させる
+→ex. git push -u origin test_branch　
+
+git pull <リモート名> <ブランチ名>　リモートリポジトリの中身をローカルリポジトリに持ってくる
+
+git status 
+
+git 
