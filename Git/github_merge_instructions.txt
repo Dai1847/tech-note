@@ -1,0 +1,41 @@
+
+GitHub上でブランチをマージし、削除する手順と考え方
+
+✅ 目的
+feature/AD ブランチの内容を feature/Linuc300 ブランチに統合し、不要になった feature/AD を削除する。
+
+🧭 手順
+
+1. Pull Request（PR）を作成
+- GitHubのリポジトリページにアクセス
+- 「Pull requests」タブ → 「New pull request」をクリック
+- 以下のように設定：
+  - base：feature/Linuc300
+  - compare：feature/AD
+- 差分を確認し、「Create pull request」をクリック
+- PRのタイトルと説明を記入（例：「AD機能をLinuc300ブランチに統合」）
+
+2. PRをマージ
+- PRページで内容を確認
+- 問題なければ「Merge pull request」→「Confirm merge」をクリック
+
+3. feature/AD ブランチを削除
+- マージ完了後、「Delete branch」ボタンをクリック
+- または「Branches」タブから feature/AD を探して削除
+
+4. ローカルの状態を更新（任意）
+```
+git checkout feature/Linuc300
+git pull origin feature/Linuc300
+```
+→ GitHubでマージされた内容をローカルにも反映
+
+🧠 考え方
+
+| 項目 | 内容 |
+|------|------|
+| baseブランチ | マージ先（今回は feature/Linuc300） |
+| compareブランチ | マージ元（今回は feature/AD） |
+| PRの目的 | feature/AD の成果物を feature/Linuc300 に統合する |
+| 削除のタイミング | マージ後に不要になったブランチは削除して整理 |
+| 履歴の安全性 | 削除しても履歴は残るため、後から確認可能 |
