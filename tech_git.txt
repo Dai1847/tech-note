@@ -19,4 +19,10 @@ git pull <リモート名> <ブランチ名>　リモートリポジトリの中
 
 git status 
 
-git 
+■Githubとの連携手順
+git remote add origin https://github.com/ユーザー名/リポジトリ名.git
+→ローカルリポジトリとGithubを接続する
+
+git branch -M main ブランチを作成
+
+git push -u origin main 更新内容をアップロード 
